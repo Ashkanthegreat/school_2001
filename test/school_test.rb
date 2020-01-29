@@ -29,7 +29,7 @@ class SchoolTest < Minitest::Test
     school = School.new('9:00', 7)
 
     assert_equal [], school.student_names
-  end
+  end 
 
   #Iteration 2 Tests:
   def test_it_can_add_student_names
