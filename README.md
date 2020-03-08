@@ -88,4 +88,4 @@ pry(main)> school = School.new('9:00', 7)
 
 pry(main)> school.convert_end_time_to_clock_time
 #=> 4:00
-```
+``` 

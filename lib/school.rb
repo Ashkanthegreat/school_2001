@@ -1,10 +1,27 @@
 class School
+  attr_reader :start_time, :hours_in_school_day, :student_names
 
   def initialize(start_time, hours_in_school_day)
-    @start = start_time
-    @hours = hours_in_school_day
-    @studentNames = []
+    @start_time = start_time
+    @hours_in_school_day = hours_in_school_day
+    @student_names = []
   end
-end
 
-school = School.new('9:00', 7)
+  def add_student_name(name)
+    @student_names << name
+  end
+
+  def end_time
+  end_time = @start_time.to_i + @hours_in_school_day
+  end_time.to_s + ':00'
+  end
+
+  def is_full_time
+    @hours_in_school_day > 4
+  end
+
+  def standard_student_names
+    @student_names.map {|name| name.capitalize }
+  end
+
+end
